@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progetto Archeologia</title>
+    <link rel="icon" href="img/app-icon-512.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <main>
+        <h1 style="text-align: center; margin-bottom: 1.5rem; font-size: 2.2rem; color: #111827;">
+            Condivisione Archeologica
+        </h1>
+        <section class="content">
+            <section class="sectionForm">
+                <form id="form">
+
+                    <div>
+                        <label for="personName">Nome Scavo</label><br>
+                        <input type="textBox" name="personName" id="personName"><br>
+                    </div>
+                    <div>
+                        <label for="imageName">Nome Immagine</label><br>
+                        <input type="imageName" name="imageName" id="imageName"><br>
+                    </div>
+                    <div>
+                        <label for="imageUrl">Url Immagine</label><br>
+                        <input type="text" name="imageUrl" id="imageUrl"><br>
+                    </div>
+                    <div>
+                        <button type="submit">Submit </button>
+                    </div>
+                    <!-- Bottone per toggle ricerca -->
+                    <label class="switch" id="switch">
+                        <p style="padding-left: 50px;">Ricerca</p>
+                        <input type="checkbox" style="padding: 30px;" onclick="toggleSearch()">
+                        <span class="slider round"></span>
+                    </label>
+                </form>
+                
+            </section>
+
+            <!-- Visualizzazione dati -->
+            <div id="show">
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script/app.js"></script>
+</body>
+
+</html>

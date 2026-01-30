@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: #fbf7be;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+main {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #f0f4f8 0%, #e5ebee 100%);
+}
+
+.content {
+    display: flex;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* Form */
+.sectionForm {
+    width: 340px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 30px;
+    align-self: flex-start;
+    z-index: 10;
+}
+
+#form {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.12);
+    padding: 28px 24px;
+    border: 1px solid rgba(229, 231, 235, 0.8);
+    transition: all 0.25s ease;
+}
+
+#form:hover {
+    box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.14);
+}
+
+#form > div {
+    margin-bottom: 1.4rem;
+}
+
+#form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+#form input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    background: #fafafa;
+}
+
+#form input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+    background: white;
+}
+
+#form button {
+    width: 100%;
+    padding: 14px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    margin-top: 8px;
+}
+
+#form button:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3);
+}
+
+#form button:active {
+    transform: translateY(0);
+}
+
+/* Switch toggle per la ricerca */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cccccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+/* Fare rotondo lo slider */
+.slider.round {
+  border-radius: 24px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/* Persone */
+#show {
+    flex: 1;
+    min-width: 320px;
+    margin-top: 20px;
+}
+
+.sectionPersone {
+    margin: 2.2rem 0 1.1rem;
+}
+
+.sectionPersone p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    letter-spacing: -0.02em;
+    padding-left: 8px;
+    border-left: 4px solid #3b82f6;
+}
+/* Cards */
+.sectionCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+    padding: 0 8px;
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.28s ease;
+    border: 1px solid rgba(229, 231, 235, 0.6);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.14);
+}
+
+.card > div:first-child {
+    padding: 14px 16px 10px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #1f2937;
+    background: linear-gradient(to bottom, #f8fafc, #f1f5f9);
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.card > div:last-child {
+    padding: 14px 16px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    background: #f8fafc;
+}
+
+.card button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.card .edit {
+    background: #eab308;
+    color: white;
+}
+
+.card .edit:hover {
+    background: #ca8a04;
+}
+
+.card .delete {
+    background: #ef4444;
+    color: white;
+}
+
+.card .delete:hover {
+    background: #dc2626;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .sectionForm {
+        position: relative;
+        width: 100%;
+        top: 0;
+        align-self: stretch;
+    }
+
+    #form {
+        border-radius: 12px;
+        padding: 24px 20px;
+    }
+
+    .sectionCards {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+
+    #show {
+        margin-top: 10px;
+    }
+}
